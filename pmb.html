@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Madrasah Diniyah Takmiliyah Al-Barokah</title>
+    <title>PMB MDT Al-Barokah</title>
     <link rel="shortcut icon" href="./asset/img/logo.png" type="image/x-icon" />
     <!-- Bootstrap CSS -->
     <link href="asset/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="stylesheet" href="asset/css/pmb.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -51,22 +51,7 @@
               <a class="nav-link" href="#home">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">Tentang</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#programs">Program</a>
-            </li>
-            <li class="nav-item">
-              <button
-                type="button"
-                class="nav-link"
-                onclick="window.open('pmb.html', '_blank')"
-              >
-                PMB
-              </button>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Galeri</a>
+              <a class="nav-link" href="#info">Info PMB</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Kontak</a>
@@ -79,211 +64,91 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 ml-0 text-left hero-content">
-            <h1>Madrasah Diniyah Takmiliyah Al-Barokah</h1>
-            <p class="lead">
-              Membangun generasi Qurani yang berakhlak mulia dan berkarakter
-              islami
-            </p>
-            <a href="#about" class="btn btn-circle">
-              <i class="fa fa-angle-double-down animated"></i>
-            </a>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="hero-content">
+              <div class="pmb-badge pulse">PMB 2025 DIBUKA!</div>
+              <h1>Bergabunglah dengan Keluarga Besar MDT Al-Barokah</h1>
+              <p class="lead">
+                Wujudkan impian menjadi generasi Qurani yang berakhlak mulia dan
+                berkarakter islami. Daftar sekarang dan raih kesempatan emas
+                ini!
+              </p>
+              <div class="cta-buttons">
+                <button
+                  class="btn btn-primary-custom btn-lg"
+                  onclick="window.open('form.html', '_blank')"
+                >
+                  <i class="fas fa-edit me-2"></i>
+                  Daftar Sekarang
+                </button>
+                <a href="#info" class="btn btn-outline-custom btn-lg">
+                  <i class="fas fa-info-circle me-2"></i>
+                  Info Selengkapnya
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding">
+    <!-- Info PMB Section -->
+    <section id="info" class="info-section">
       <div class="container">
         <div class="section-title">
-          <h2>Tentang Madrasah</h2>
+          <h2>Informasi Penerimaan Murid Baru</h2>
           <p>
-            Mengenal lebih dekat visi, misi, dan nilai-nilai yang kami junjung
+            Ketahui semua yang perlu Anda tahu tentang pendaftaran di MDT
+            Al-Barokah
           </p>
         </div>
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="card-custom">
-              <div class="card-body">
-                <div class="card-icon">
-                  <i class="fas fa-book-open"></i>
-                </div>
-                <h4 class="text-center mb-3">Visi Kami</h4>
-                <p class="text-center">
-                  Menjadi lembaga pendidikan Islam terdepan yang mencetak
-                  generasi Qurani, berakhlak mulia, dan siap menghadapi
-                  tantangan zaman dengan tetap berpegang teguh pada nilai-nilai
-                  islami.
-                </p>
+        <div class="row g-4 d-flex justify-content-around">
+          <div class="col-lg-4 col-md-6">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-graduation-cap"></i>
               </div>
+              <h4>Syarat Pendaftaran</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Fotokopi KTP
+                  Orang Tua
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Fotokopi Kartu
+                  Keluarga
+                </li>
+                <li>
+                  <i class="fas fa-check text-success me-2"></i>Pas Foto 3x4 (3
+                  lembar)
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card-custom">
-              <div class="card-body">
-                <div class="card-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <h4 class="text-center mb-3">Misi Kami</h4>
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <i class="fas fa-check text-success me-2"></i
-                    >Menyelenggarakan pendidikan Islam berkualitas
-                  </li>
-                  <li class="mb-2">
-                    <i class="fas fa-check text-success me-2"></i>Membentuk
-                    karakter islami yang kuat
-                  </li>
-                  <li class="mb-2">
-                    <i class="fas fa-check text-success me-2"></i>Mengembangkan
-                    potensi santri secara optimal
-                  </li>
-                  <li class="mb-2">
-                    <i class="fas fa-check text-success me-2"></i>Membangun
-                    lingkungan belajar yang kondusif
-                  </li>
-                </ul>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-money-bill-wave"></i>
               </div>
+              <h4>Biaya Pendidikan</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-tag text-success me-2"></i>Uang Pendaftaran:
+                  <strong>Rp 50.000</strong>
+                </li>
+                <li>
+                  <i class="fas fa-tag text-success me-2"></i>SPP Bulanan:
+                  <strong>Rp 20.000</strong>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">30+</div>
-              <div class="stat-label">Santri Aktif</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Ustadz/Ustadzah</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">10+</div>
-              <div class="stat-label">Tahun Berdiri</div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="stat-item">
-              <div class="stat-number">3</div>
-              <div class="stat-label">Program Unggulan</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="section-padding bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Program Unggulan</h2>
-          <p>
-            Berbagai program pembelajaran yang dirancang untuk mengembangkan
-            potensi santri
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="program-card">
-              <div class="program-icon">
-                <i class="fas fa-book-reader"></i>
-              </div>
-              <h4>Baca Kitab Kuning</h4>
-              <p>
-                Program membaca dan memahami kitab kuning klasik menggunakan
-                metode sorogan dan bandongan, dibimbing oleh asatidz
-                berpengalaman.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="program-card">
-              <div class="program-icon">
-                <i class="fas fa-book"></i>
-              </div>
-              <h4>Fiqih & Akhlak</h4>
-              <p>
-                Pembelajaran fiqih praktis berdasarkan madzhab, serta pembinaan
-                akhlak santri sesuai tuntunan ulama salaf.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="program-card">
-              <div class="program-icon">
-                <i class="fas fa-quran"></i>
-              </div>
-              <h4>Metode Qurani Sidogiri</h4>
-              <p>
-                Program membaca Al-Qur’an dengan metode khas Pondok Pesantren
-                Sidogiri yang terbukti efektif dan terstruktur.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-padding">
-      <div class="container">
-        <div class="section-title">
-          <h2>Galeri Kegiatan</h2>
-          <p>Dokumentasi berbagai kegiatan dan momen berharga di madrasah</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <img src="asset/img/SAVE_20250630_170825.jpg" />
-              <div class="gallery-overlay">
-                <span>Pastisipasi Lomba Musamma</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <img src="asset/img/juara lomba kuis.jpg" />
-              <div class="gallery-overlay">
-                <span>Juara II Lomba Kuis Pendidikan</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <img src="asset/img/wisuda terbaik.jpg" />
-              <div class="gallery-overlay">
-                <span>Wisuda Terbaik Dan Bintang Pelajar</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-item">
-              <img src="asset/img/wisuda.jpg" />
-              <div class="gallery-overlay">
-                <span>Wisuda Angkatan 1446</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding bg-light p-5">
       <div class="container">
         <div class="section-title">
           <h2>Hubungi Kami</h2>
@@ -411,33 +276,15 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-6 mb-4">
+          <div class="col-lg-4 mb-4">
             <h5>Menu</h5>
             <ul class="footer-links">
               <li><a href="#home">Beranda</a></li>
-              <li><a href="#about">Tentang</a></li>
-              <li><a href="#programs">Program</a></li>
-              <li>
-                <button
-                  type="button"
-                  onclick="window.open('pmb.html', '_blank')"
-                >
-                  PMB
-                </button>
-              </li>
-              <li><a href="#gallery">Galeri</a></li>
+              <li><a href="#info">Info PMB</a></li>
               <li><a href="#contact">Kontak</a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <h5>Program</h5>
-            <ul class="footer-links">
-              <li><a href="#">Baca Kitab Kuning</a></li>
-              <li><a href="#">Fiqih & Akhlak</a></li>
-              <li><a href="#">Metode Qur'ani Sidogiri</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 mb-4">
+          <div class="col-lg-4 mb-4">
             <h5>Kontak Info</h5>
             <ul class="footer-links">
               <li>
