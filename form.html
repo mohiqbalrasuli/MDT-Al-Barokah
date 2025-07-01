@@ -78,8 +78,8 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="nama_murid" class="form-label">Nama Lengkap</label>
-                                    <input required type="text" class="form-control" id="nama_murid"
-                                        name="nama_murid" required>
+                                    <input type="text" class="form-control" id="nama_murid" name="nama_murid"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
@@ -94,13 +94,13 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
-                                    <input required type="text" class="form-control" id="tempat_lahir"
-                                        name="tempat_lahir" required>
+                                    <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                                    <input required type="date" class="form-control" id="tanggal_lahir"
-                                        name="tanggal_lahir" required>
+                                    <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir"
+                                        required>
                                 </div>
                             </div>
 
@@ -110,22 +110,24 @@
                             </div>
 
                             <div class="mb-4">
-                                <label for="foto_murid" class="form-label">Upload Foto_murid</label>
-                                <input required class="form-control" type="file" id="foto_murid"
-                                    name="foto_murid" accept="image/*">
-                                <div class="invalid-feedback">Format Nama File : foto_Nama Murid</div>
+                                <label for="foto_murid" class="form-label">Upload Foto Murid</label>
+                                <input class="form-control" type="file" id="foto_murid" name="foto_murid"
+                                    accept="image/*" required>
+                                <div class="form-text">Format Nama File: foto_Nama Murid (maksimal 5MB)</div>
                             </div>
+
                             <div class="mb-4">
                                 <label for="foto_akta" class="form-label">Upload Akta Kelahiran</label>
-                                <input required class="form-control" type="file" id="foto_akta" name="foto_akta"
-                                    accept="image/*">
-                                <div class="invalid-feedback">Format Nama File : Akta_Nama Murid</div>
+                                <input class="form-control" type="file" id="foto_akta" name="foto_akta"
+                                    accept="image/*" required>
+                                <div class="form-text">Format Nama File: Akta_Nama Murid (maksimal 5MB)</div>
                             </div>
+
                             <div class="mb-4">
                                 <label for="foto_kk" class="form-label">Upload Kartu Keluarga</label>
-                                <input required class="form-control" type="file" id="foto_kk" name="foto_kk"
-                                    accept="image/*">
-                                <div class="invalid-feedback">Format Nama File : KK_Nama Murid</div>
+                                <input class="form-control" type="file" id="foto_kk" name="foto_kk"
+                                    accept="image/*" required>
+                                <div class="form-text">Format Nama File: KK_Nama Murid (maksimal 5MB)</div>
                             </div>
 
                             <!-- Data Orang Tua -->
@@ -136,97 +138,137 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="nama_ayah" class="form-label">Nama Ayah</label>
-                                    <input required type="text" class="form-control" id="nama_ayah"
-                                        name="nama_ayah" required>
+                                    <input type="text" class="form-control" id="nama_ayah" name="nama_ayah"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="pekerjaan_ayah" class="form-label">Pekerjaan Ayah</label>
-                                    <input required type="text" class="form-control" id="pekerjaan_ayah"
-                                        name="pekerjaan_ayah">
+                                    <input type="text" class="form-control" id="pekerjaan_ayah"
+                                        name="pekerjaan_ayah" required>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="nama_ibu" class="form-label">Nama Ibu</label>
-                                    <input required type="text" class="form-control" id="nama_ibu"
-                                        name="nama_ibu" required>
+                                    <input type="text" class="form-control" id="nama_ibu" name="nama_ibu"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="pekerjaan_ibu" class="form-label">Pekerjaan Ibu</label>
-                                    <input required type="text" class="form-control" id="pekerjaan_ibu"
-                                        name="pekerjaan_ibu">
+                                    <input type="text" class="form-control" id="pekerjaan_ibu"
+                                        name="pekerjaan_ibu" required>
                                 </div>
                             </div>
 
                             <div class="mb-4">
                                 <label for="no_hp_ortu" class="form-label">Nomor HP Orang Tua</label>
-                                <input required type="tel" class="form-control" id="no_hp_ortu"
-                                    name="no_hp_ortu" required>
+                                <input type="tel" class="form-control" id="no_hp_ortu" name="no_hp_ortu"
+                                    required pattern="[0-9]{10,13}" placeholder="08xxxxxxxxxx">
+                                <div class="form-text">Masukkan nomor HP yang valid (10-13 digit)</div>
                             </div>
 
                             <!-- Tombol Submit -->
                             <div class="text-end">
-                                <button type="submit" class="btn btn-success">Kirim Pendaftaran</button>
+                                <button type="submit" class="btn btn-success" id="submit-btn">
+                                    <span class="loading spinner-border spinner-border-sm me-2" role="status"></span>
+                                    Kirim Pendaftaran
+                                </button>
                                 <button type="reset" class="btn btn-secondary">Reset</button>
                             </div>
                         </form>
                         <script>
+                            // Validasi ukuran file
+                            function validateFileSize(file) {
+                                const maxSize = 5 * 1024 * 1024; // 5MB
+                                return file.size <= maxSize;
+                            }
+
                             async function encodeFileToBase64(file) {
+                                if (!validateFileSize(file)) {
+                                    throw new Error(`File ${file.name} terlalu besar. Maksimal 5MB.`);
+                                }
+
                                 return new Promise((resolve, reject) => {
                                     const reader = new FileReader();
-                                    reader.onload = () => resolve(reader.result.split(",")[1]); // Hilangkan header base64
+                                    reader.onload = () => resolve(reader.result.split(",")[1]);
                                     reader.onerror = reject;
                                     reader.readAsDataURL(file);
                                 });
                             }
-                            document.querySelector("form").addEventListener("submit", async function(e) {
+
+                            document.getElementById("form-pendaftaran").addEventListener("submit", async function(e) {
                                 e.preventDefault();
 
                                 const form = e.target;
-                                const fotoMurid = form.foto_murid.files[0];
-                                const fotoAkta = form.foto_akta.files[0];
-                                const fotoKK = form.foto_kk.files[0];
+                                const submitBtn = document.getElementById('submit-btn');
+                                const loading = submitBtn.querySelector('.loading');
 
-                                const [encodedFoto, encodedAkta, encodedKK] = await Promise.all([
-                                    encodeFileToBase64(fotoMurid),
-                                    encodeFileToBase64(fotoAkta),
-                                    encodeFileToBase64(fotoKK),
-                                ]);
-
-                                const formData = new URLSearchParams();
-                                formData.append("nama_murid", form.nama_murid.value);
-                                formData.append("jenis_kelamin", form.jenis_kelamin.value);
-                                formData.append("tempat_lahir", form.tempat_lahir.value);
-                                formData.append("tanggal_lahir", form.tanggal_lahir.value);
-                                formData.append("alamat", form.alamat.value);
-                                formData.append("nama_ayah", form.nama_ayah.value);
-                                formData.append("pekerjaan_ayah", form.pekerjaan_ayah.value);
-                                formData.append("nama_ibu", form.nama_ibu.value);
-                                formData.append("pekerjaan_ibu", form.pekerjaan_ibu.value);
-                                formData.append("no_hp_ortu", form.no_hp_ortu.value);
-                                formData.append("foto_murid", encodedFoto);
-                                formData.append("foto_akta", encodedAkta);
-                                formData.append("foto_kk", encodedKK);
+                                // Show loading
+                                submitBtn.disabled = true;
+                                loading.style.display = 'inline-block';
 
                                 try {
+                                    const fotoMurid = form.foto_murid.files[0];
+                                    const fotoAkta = form.foto_akta.files[0];
+                                    const fotoKK = form.foto_kk.files[0];
+
+                                    if (!fotoMurid || !fotoAkta || !fotoKK) {
+                                        throw new Error("Semua file foto harus diupload");
+                                    }
+
+                                    const [encodedFoto, encodedAkta, encodedKK] = await Promise.all([
+                                        encodeFileToBase64(fotoMurid),
+                                        encodeFileToBase64(fotoAkta),
+                                        encodeFileToBase64(fotoKK),
+                                    ]);
+
+                                    const formData = new URLSearchParams();
+                                    formData.append("nama_murid", form.nama_murid.value.trim());
+                                    formData.append("jenis_kelamin", form.jenis_kelamin.value);
+                                    formData.append("tempat_lahir", form.tempat_lahir.value.trim());
+                                    formData.append("tanggal_lahir", form.tanggal_lahir.value);
+                                    formData.append("alamat", form.alamat.value.trim());
+                                    formData.append("nama_ayah", form.nama_ayah.value.trim());
+                                    formData.append("pekerjaan_ayah", form.pekerjaan_ayah.value.trim());
+                                    formData.append("nama_ibu", form.nama_ibu.value.trim());
+                                    formData.append("pekerjaan_ibu", form.pekerjaan_ibu.value.trim());
+                                    formData.append("no_hp_ortu", form.no_hp_ortu.value.trim());
+                                    formData.append("foto_murid", encodedFoto);
+                                    formData.append("foto_akta", encodedAkta);
+                                    formData.append("foto_kk", encodedKK);
+
                                     const response = await fetch(
                                         "https://script.google.com/macros/s/AKfycbxTimIum6qkaL7zCvZ97XGTqDljnruYSd6EfBCO1wi-y-jki0t7f5vCXvdHW675TyFD/exec", {
                                             method: "POST",
+                                            mode: "cors",
+                                            headers: {
+                                                'Content-Type': 'application/x-www-form-urlencoded'
+                                            },
                                             body: formData,
                                         }
                                     );
 
+                                    if (!response.ok) {
+                                        throw new Error(`HTTP error! status: ${response.status}`);
+                                    }
+
                                     const text = await response.text();
+                                    console.log("Response:", text);
+
                                     if (text.includes("Sukses")) {
                                         alert("Pendaftaran berhasil dikirim!");
                                         form.reset();
                                     } else {
-                                        alert("Gagal: " + text);
+                                        throw new Error(text);
                                     }
                                 } catch (error) {
-                                    console.error(error);
-                                    alert("Terjadi kesalahan saat mengirim.");
+                                    console.error("Error:", error);
+                                    alert("Terjadi kesalahan: " + error.message);
+                                } finally {
+                                    // Hide loading
+                                    submitBtn.disabled = false;
+                                    loading.style.display = 'none';
                                 }
                             });
                         </script>
