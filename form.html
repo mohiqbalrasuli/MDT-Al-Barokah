@@ -223,7 +223,7 @@
                                         encodeFileToBase64(fotoKK),
                                     ]);
 
-                                    const formData = new URLSearchParams();
+                                    const formData = new FormData();
                                     formData.append("nama_murid", form.nama_murid.value.trim());
                                     formData.append("jenis_kelamin", form.jenis_kelamin.value);
                                     formData.append("tempat_lahir", form.tempat_lahir.value.trim());
