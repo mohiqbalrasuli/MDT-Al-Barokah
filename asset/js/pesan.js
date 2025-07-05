@@ -5,7 +5,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const subject = document.getElementById("phone").value;
+  const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
   const text = `Assalamualaikum wr. wb., saya ${name} (%0AEmail: ${email}) ingin menghubungi Anda.%0A%0ASubjek: ${subject}%0APesan: ${message}`;
